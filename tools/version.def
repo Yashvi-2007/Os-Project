@@ -1,5 +1,7 @@
+** DO NOT PASTE THIS PART
 // This is the other file in DLLDemo 
-// So the DLLDemo has - evil_version.c , system-config.xml , version.def
+// So the DLLDemo has - evil_version.c , system-config.xml , version.def 
+**
 
 LIBRARY version
 EXPORTS
