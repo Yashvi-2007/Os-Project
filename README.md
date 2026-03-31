@@ -54,7 +54,6 @@ Os-Project/
 ├── tools/
 │   ├── sysmon-config.xml     # Sysmon ruleset
 │   ├── version.def
-│   └── build.bat             # Compile script
 ├── docs/
 │   ├── discovery.md          # ProcMon steps
 │   ├── detection.md          # Sysmon analysis
