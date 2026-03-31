@@ -1,0 +1,28 @@
+<!--
+    Sysmon Detection Configuration ( This is the file that was to be saved in DLLDemo dir)
+    
+    PURPOSE:
+    This config tells Sysmon to log Event ID 7 (Image/DLL Loaded)
+    for any DLL loaded by Notepad++. This lets us detect our
+    malicious version.dll being loaded.
+
+-->
+ 
+<Sysmon schemaversion="4.50">
+  <EventFiltering>
+ 
+    <!-- Event ID 7 = Image/DLL Loaded -->
+    <RuleGroup name="" groupRelation="or">
+      <ImageLoad onmatch="include">
+ 
+        <!-- Log all DLLs loaded by Notepad++ -->
+        <ImageLoaded condition="contains">Notepad++</ImageLoaded>
+ 
+        <!-- Also catch DLLs loaded from unexpected locations -->
+        <ImageLoaded condition="contains">DLLDemo</ImageLoaded>
+ 
+      </ImageLoad>
+    </RuleGroup>
+ 
+  </EventFiltering>
+</Sysmon>
