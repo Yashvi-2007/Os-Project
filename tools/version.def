@@ -1,3 +1,6 @@
+// This is the other file in DLLDemo 
+// So the DLLDemo has - evil_version.c , system-config.xml , version.def
+
 LIBRARY version
 EXPORTS
 GetFileVersionInfoA
@@ -16,3 +19,4 @@ VerInstallFileA
 VerInstallFileW
 VerLanguageNameA
 VerLanguageNameW
+
