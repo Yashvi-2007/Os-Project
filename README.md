@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project demonstrates **DLL Hijacking** as a persistence mechanism on Windows, covering both the **attack** (red team) and **detection** (blue team) perspectives as a part of my Sem-4 project(GTU-SET).
 
@@ -12,7 +12,7 @@ This project demonstrates **DLL Hijacking** as a persistence mechanism on Window
 
 ---
 
-## 🧠 What is DLL Hijacking?
+##  What is DLL Hijacking?
 
 When a Windows application loads a DLL, it searches for it in a specific order:
 
@@ -29,7 +29,7 @@ If an application searches for a DLL that **doesn't exist in its own folder**, a
 
 ---
 
-## 🛠️ Environment Setup
+##  Environment Setup
 
 | Component | Details |
 |---|---|
@@ -42,7 +42,7 @@ If an application searches for a DLL that **doesn't exist in its own folder**, a
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 Os-Project/
@@ -65,7 +65,7 @@ Os-Project/
 
 ---
 
-## ⚔️ Attack Phase — Step by Step
+##  Attack Phase — Step by Step
 
 ### Step 1: Discovery with ProcMon
 
@@ -109,7 +109,7 @@ Close and reopen Notepad++. The malicious DLL executes automatically.
 
 ---
 
-## 🛡️ Detection Phase
+##  Detection Phase
 
 ### Sysmon — Event ID 7 (Image Loaded)
 
@@ -138,7 +138,7 @@ Description:  (empty)        ← 🚨 RED FLAG
 
 ---
 
-## 🔒 Mitigations
+##  Mitigations
 
 | Mitigation | Description |
 |---|---|
@@ -150,7 +150,7 @@ Description:  (empty)        ← 🚨 RED FLAG
 
 ---
 
-## 📊 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 | Field | Value |
 |---|---|
@@ -172,4 +172,4 @@ Description:  (empty)        ← 🚨 RED FLAG
 
 ---
 
-Yashvi Kansara 
+Yashvi Kansara | 241370107024 
