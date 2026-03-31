@@ -59,8 +59,8 @@ Os-Project/
 │   ├── discovery.md          # ProcMon steps
 │   ├── detection.md          # Sysmon analysis
 │   └── defenses.md           # Mitigation guide
-├── images/                   # Screenshots (add your own)
-└── LICENSE                   # MIT License for academic use
+├── images/                   # Screenshots
+└── LICENSE                   
 ```
 
 ---
@@ -78,7 +78,7 @@ Run **Process Monitor** as Administrator and set filters:
 
 Launch **Notepad++** and observe missing DLLs.An older version of Notepad++ is used to perform this (V.8). We found:
 ```
-C:\Program Files (x86)\Notepad++\VERSION.dll  →  NAME NOT FOUND ✅
+C:\Program Files (x86)\Notepad++\VERSION.dll  →  NAME NOT FOUND 
 ```
 
 ### Step 2: Write the Malicious DLL
@@ -131,9 +131,9 @@ Applications and Services Logs
 EventID:      7
 Image:        C:\Program Files (x86)\Notepad++\notepad++.exe
 ImageLoaded:  C:\Program Files (x86)\Notepad++\version.dll
-Signed:       false          ← 🚨 RED FLAG
-Company:      (empty)        ← 🚨 RED FLAG
-Description:  (empty)        ← 🚨 RED FLAG
+Signed:       false          ← RED FLAG
+Company:      (empty)        ← RED FLAG
+Description:  (empty)        ← RED FLAG
 ```
 
 ---
@@ -166,9 +166,8 @@ Description:  (empty)        ← 🚨 RED FLAG
 
 1. Install [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
 2. Apply the ruleset: `sysmon -c tools/sysmon-config.xml`
-3. Build the DLL: run `tools/build.bat`
-4. Place `version.dll` in `C:\Program Files (x86)\Notepad++\`
-5. Launch Notepad++ and observe the payload + Sysmon logs
+3. Place `version.dll` in `C:\Program Files (x86)\Notepad++\`
+4. Launch Notepad++ and observe the payload + Sysmon logs
 
 ---
 
